@@ -5,8 +5,10 @@ import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
 
-/*
+/**
  * Based on LinkedStack: http://algs4.cs.princeton.edu/13stacks/LinkedStack.java
+ * 
+ * @param <Item>
  */
 
 public class Deque<Item> implements Iterable<Item> {
@@ -126,17 +128,6 @@ public class Deque<Item> implements Iterable<Item> {
 
 
     /**
-     * Returns a string representation of this stack.
-     * @return the sequence of items in the stack in LIFO order, separated by spaces
-     */
-    public String toString() {
-        StringBuilder s = new StringBuilder();
-        for (Item item : this)
-            s.append(item + " ");
-        return s.toString();
-    }
-       
-    /**
      * Returns an iterator to this deque that iterates through the items in LIFO order.
      * @return an iterator to this deque that iterates through the items in LIFO order.
      */
@@ -163,7 +154,7 @@ public class Deque<Item> implements Iterable<Item> {
 
 
     /**
-     * Unit tests the {@code LinkedStack} data type.
+     * Unit tests the {@code Deque} data type.
      *
      * @param args the command-line arguments
      */
