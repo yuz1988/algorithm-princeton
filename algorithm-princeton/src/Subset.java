@@ -25,7 +25,7 @@ public class Subset {
 //				randQ.enqueue(StdIn.readString());
 //			}
 //			else {
-//				double prob = ((double) counter - 1) / counter;
+//				double prob = ((double) k) / counter;
 //				if (StdRandom.uniform() < prob) {
 //					randQ.dequeue();
 //					randQ.enqueue(StdIn.readString());
