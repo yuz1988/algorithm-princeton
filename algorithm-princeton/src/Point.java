@@ -64,7 +64,7 @@ public class Point implements Comparable<Point> {
     			return Double.NEGATIVE_INFINITY;
     		}
     		else {
-    			return 0;
+    			return +0.0;
     		}
     	}
     	else if (x == that.x) {
@@ -114,22 +114,21 @@ public class Point implements Comparable<Point> {
      * @return the Comparator that defines this ordering on points
      */
     public Comparator<Point> slopeOrder() {
-    	return new slopeComparator();
+    	return new SlopeComparator();
     }
     
-    private class slopeComparator implements Comparator<Point> {
+    private class SlopeComparator implements Comparator<Point> {
 		@Override
 		public int compare(Point o1, Point o2) {
-//			if (slopeTo(o1) == slopeTo(o2)) {
-//				return 0;
-//			}
-//			else if (slopeTo(o1) > slopeTo(o2)) {
-//				return 1;
-//			}
-//			else {
-//				return -1;
-//			}
-			return (int) (slopeTo(o1) - slopeTo(o2));
+			if (slopeTo(o1) == slopeTo(o2)) {
+				return 0;
+			}
+			else if (slopeTo(o1) > slopeTo(o2)) {
+				return 1;
+			}
+			else {
+				return -1;
+			}
 		}
 	}
 
