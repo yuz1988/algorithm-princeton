@@ -1,3 +1,4 @@
+package assignment3;
 /*************************************************************************
  *  Compilation:  javac LineSegment.java
  *  Execution:    none

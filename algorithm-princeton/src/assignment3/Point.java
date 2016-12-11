@@ -1,3 +1,4 @@
+package assignment3;
 /******************************************************************************
  *  Compilation:  javac Point.java
  *  Execution:    java Point
