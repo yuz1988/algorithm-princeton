@@ -1,4 +1,3 @@
-package assignment4;
 import java.util.LinkedList;
 
 import edu.princeton.cs.algs4.In;
