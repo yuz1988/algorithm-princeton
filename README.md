@@ -1,2 +1,2 @@
 # algorithm-princeton
-algorithm class of princeton
+Online course from Coursera: Algorithms@Princeton, by Robert Sedgewick
