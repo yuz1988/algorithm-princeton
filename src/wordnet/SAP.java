@@ -48,24 +48,24 @@ public class SAP {
         return bfs(v, w)[1];
     }
 
-    // a common ancestor that participates in shortest ancestral path; -1 if no such
-    // path
+    // a common ancestor that participates in shortest ancestral path;
+    // -1 if no such path
     public int ancestor(Iterable<Integer> v, Iterable<Integer> w) {
         return bfs(v, w)[0];
     }
 
     // do unit testing of this class
     public static void main(String[] args) {
-        In in = new In("./wordnet/graphs/digraph25.txt");
+        In in = new In(args[0]);
         Digraph G = new Digraph(in);
         SAP sap = new SAP(G);
-        StdOut.print("Input first vertex: \n");
-        int v = StdIn.readInt();
-        StdOut.print("Input second vertex: \n");
-        int w = StdIn.readInt();
-        int length = sap.length(v, w);
-        int ancestor = sap.ancestor(v, w);
-        StdOut.printf("length = %d,  ancestor = %d\n", length, ancestor);
+        while (!StdIn.isEmpty()) {
+            int v = StdIn.readInt();
+            int w = StdIn.readInt();
+            int length = sap.length(v, w);
+            int ancestor = sap.ancestor(v, w);
+            StdOut.printf("length = %d, ancestor = %d\n", length, ancestor);
+        }
     }
 
     /**
